@@ -15,7 +15,9 @@ const { title, description } = Astro.props as Props;
   <MainHead title={title} description={description} />
   <body>
     <Nav />
-    <slot>Default text</slot>
+    <main>
+      <slot>Default text</slot>
+    </main>
     <Footer />
   </body>
 </html>
