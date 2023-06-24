@@ -7,12 +7,22 @@ import Nav from "../components/Nav.astro";
 interface Props {
   title: string;
   description: string;
+  url: string;
+  image: string;
+  frontmatter: any;
+  robots: string;
 }
-const { title, description } = Astro.props as Props;
+const { title, description, image, frontmatter, robots } = Astro.props as Props;
 ---
 
 <html lang="en">
-  <MainHead title={title} description={description} />
+  <MainHead
+    title={title}
+    description={description}
+    image={image}
+    frontmatter={frontmatter}
+    robots={robots}
+  />
   <body>
     <Nav />
     <main>
